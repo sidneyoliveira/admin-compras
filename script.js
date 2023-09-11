@@ -29,4 +29,45 @@ sidebarToggle.addEventListener("click", () => {
     }else{
         localStorage.setItem("status", "open");
     }
-})
+});
+
+// table.js
+// dados.js
+// var dados = [
+//     [
+//        "1",
+//        "Tiger Nixon",
+//        "System Architect",
+//        "Edinburgh",
+//        "5421",
+//        "2011\/04\/25",
+//        "$320,800",
+//        "$170,750",
+//        "$170,750",
+//     ],
+//     [
+//        "2",
+//        "Garrett Winters",
+//        "Accountant",
+//        "Tokyo",
+//        "8422",
+//        "2011\/07\/25",
+//        "$170,750",
+//        "$170,750",
+//        "$170,750",
+//     ],
+//   ];
+
+
+$(document).ready(function() {
+   var table = $('#table_1').DataTable({
+       'data': dados,
+       'columnDefs': [
+          {
+             'targets': 0,
+             'checkboxes': true
+          }
+       ],
+       'order': [[1, 'asc']]
+   });
+});

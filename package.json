@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "datatables.net-dt": "^1.13.6",
     "lucide": "^0.274.0"
   }
 }

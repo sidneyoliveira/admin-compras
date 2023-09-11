@@ -32,7 +32,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
+    background-color: var(--panel-color);
 }
 body.dark{
     --primary-color: #ffffff;
@@ -172,6 +172,11 @@ body.dark li a:hover:before{
     color: var(--text-color);
     transition: var(--tran-05);
 }
+
+.menu-items ul {
+    padding-left: 0rem !important;
+}
+
 nav.close li a .link-name{
     opacity: 0;
     pointer-events: none;
@@ -304,7 +309,7 @@ nav.close ~ .dashboard .top{
 .dash-content .title{
     display: flex;
     align-items: center;
-    margin: 60px 0 30px 0;
+    margin: 30px 0 30px 0;
     padding: 10px 15px;
     border-radius: 10px;
     background-color: var(--container-color);
@@ -347,6 +352,8 @@ nav.close ~ .dashboard .top{
     box-shadow: 0px 0px 5px var(--border-color);
 
 }
+
+
 .boxes .box i{
     font-size: 35px;
     color: var(--text-color);
@@ -409,6 +416,10 @@ table.activity-data .header .data-title{
     white-space: nowrap;
     color: var(--text-color);
 }
+
+
+
+
 
 @media (max-width: 1000px) {
     nav{
