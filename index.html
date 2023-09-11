@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +7,17 @@
     
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="css/style.css">
-     
+    
     <!----===== Box Icons CSS ===== -->
     <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 
+
+    <!-- DataTable CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
+    <link type="text/css" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
+    
     <title>Departamento de Compras</title> 
 </head>
 <body>
@@ -26,22 +32,22 @@
             </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li class="lista"><a href="#">
                     <i class='bx bx-home'></i>
                     <span class="link-name">Inicio</span>
                 </a></li>
-                <li><a href="#">
+                <li  class="lista"><a href="#">
                     <i class='bx bx-package'></i>
                     <span class="link-name">Pedidos</span>
                 </a></li>
-                <li><a href="#">
+                <li  class="lista"><a href="#">
                     <i class='bx bx-line-chart'></i>
                     <span class="link-name">Relatórios</span>
                 </a></li>
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="#">
+                <li  class="lista"><a href="#">
                     <i class='bx bx-log-out'></i>
                     <span class="link-name">Sair</span>
                 </a></li>
@@ -104,26 +110,40 @@
                     <span class="text">Solicitações</span>
                 </div>
 
-                <table>
-                    <div class="header">
-                        <span class="data-title">DATA</span>
-                        <span class="data-title">PRODUTO</span>
-                        <span class="data-title">QUANTIDADE</span>
-                        <span class="data-title">SOLICITANTE</span>
-                        <span class="data-title">SECRETARIA</span>
-                    </div>
-                    <div class="list">
-                        <span class="data-title">DATA</span>
-                        <span class="data-title">PRODUTO</span>
-                        <span class="data-title">QUANTIDADE</span>
-                        <span class="data-title">SOLICITANTE</span>
-                        <span class="data-title">SECRETARIA</span>
-                    </div>
-                </table>
+                <div class="container p-3 mt-0 bg-light  border-primary">
+                    <!-- DataTable Code starts -->
+                    <table id="table_1" class="table table-striped nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nº REQ.</th>
+                                <th>SETOR</th>
+                                <th>SECRETARIA</th>
+                                <th>DATA</th>
+                                <th>ITEM</th>
+                                <th>QUANT</th>
+                                <th>V. UNT.</th>
+                                <th>V. TOTAL</th>
+                            </tr>
+                        </thead>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
+    
+    <!-- DataTable JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
 
+    <!-- Custom JS -->
     <script src="script.js"></script>
+
+    
 </body>
 </html>
