@@ -1,0 +1,446 @@
+*{
+  font-family: Goldplay, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 600;
+}
+
+:root {
+  /* === CORES === */
+  --body-color: #fbfbff;
+  --sidebar-color:#fff;
+  --primary-color:#0060af;
+  --primary-color-light:#f6f5ff;
+  --trogle-color:#000;
+  --text-color: #4b5563;
+  --hover-color: #eff5ff;
+  --box1-color: #4DA3FF;
+  --box2-color: #FFE6AC;
+  --box3-color: #E7D1FC;
+
+  /*=== transicoes ====*/
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+
+}
+
+body {
+  min-height: 100vh;
+  background: var(--body-color);
+}
+
+.home{
+  display: flex;
+  
+  justify-content: space-around;
+}
+
+.conteiner{
+  position: relative;
+  float:left;
+  left: 0px;
+  background-color: var(--panel-color);
+  min-height: 100vh;
+  width: 250px;
+  padding: 10px 14px;
+  transition: var(--tran-05);
+}
+
+/* == sidebar == */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  padding:15px 10px ;
+  background: var(--sidebar-color);
+  box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-03);
+  
+}
+
+.sidebar.close{
+  width: 60px;
+}
+
+.menu-links{
+  padding-left: 0;
+}
+
+/* ==== Sidebar Lista === */
+
+.sidebar li{
+  height: 35px;
+  background: var(--sidebar-color);
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: var(--tran-03);
+  transition-delay: 0.2s;
+}
+
+.sidebar li:hover{
+  transition: var(--tran-03);
+  background: var(--hover-color);
+}
+
+/* === Cabeçario ==== */
+.header-text{
+  transition: var(--tran-02);
+}
+
+.header-text.close{
+  opacity: 0;
+}
+
+.sidebar header .image-text{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .image-text img {
+  transition: var(--tran-02);
+  width: 60px;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+.sidebar .image-text .close img  {
+  width: 50px;
+}
+
+/* ==== Texto da Lista === */
+.sidebar li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: var(--tran-03);
+  transition-delay: 0.2s;
+}
+
+/* === Icones da Lista === */
+.sidebar li i{
+  min-width: 35px;
+  font-size: 25px;
+  
+}
+
+.sidebar.close li i{
+  font-size: 30px;
+}
+
+.sidebar li .text,
+.sidebar li i{
+  color: var(--text-color);
+  transition: var(--tran-02);
+  
+}
+
+.sidebar.close li .text{
+  opacity: 0;
+}
+
+.dashboard{
+  position: relative;
+  left: 250px;
+  background-color: var(--panel-color);
+  min-height: 100vh;
+  width: calc(100% - 250px);
+  padding: 10px 14px;
+  transition: var(--tran-05);
+}
+nav.close ~ .dashboard{
+  left: 100px;
+  width: calc(100% - 73px);
+}
+.dashboard .top{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: var(--panel-color);
+  transition: var(--tran-05);
+}
+nav.close ~ .dashboard .top{
+  left: 100px;
+  width: calc(100% - 73px);
+}
+.dashboard .top .sidebar-toggle{
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+
+/* === Seta do Cabeçario === */
+.sidebar header .toggle{
+  position: absolute;
+  top: 28px;
+  right: -15px;
+  height: 25px ;
+  width: 25px;
+  background: var(--sidebar-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+  color: var(--text-color);
+  font-size: 20px;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-02);
+  z-index: 3;
+}
+
+.sidebar header .toggle:hover{
+  background: var(--hover-color);
+  box-shadow: 0 0px 10px 3px rgba(255, 255, 255, 1);
+}
+
+.sidebar.close header .toggle {
+  transition: var(--tran-02);
+  transform: rotate(-180deg);
+}
+
+.dashboard .top .search-box{
+  position: relative;
+  height: 45px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 30px;
+}
+.top .search-box input{
+  position: absolute;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  padding: 0 25px 0 50px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+}
+.top .search-box i{
+  position: absolute;
+  left: 15px;
+  font-size: 22px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--black-light-color);
+}
+.top img{
+  width: 40px;
+  border-radius: 50%;
+}
+.dashboard .dash-content{
+  padding-top: 50px;
+}
+.dash-content .title{
+  display: flex;
+  align-items: center;
+  margin: 60px 0 30px 0;
+}
+.dash-content .title i{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  color: var(--title-icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.dash-content .title .text{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+.dash-content .boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dash-content .boxes .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  width: calc(100% / 3 - 15px);
+  padding: 15px 20px;
+  background-color: var(--box1-color);
+  transition: var(--tran-05);
+}
+.boxes .box i{
+  font-size: 35px;
+  color: var(--text-color);
+}
+.boxes .box .text{
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.boxes .box .number{
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.boxes .box.box2{
+  background-color: var(--box2-color);
+}
+.boxes .box.box3{
+  background-color: var(--box3-color);
+}
+.dash-content .activity .activity-data{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.activity .activity-data{
+  display: flex;
+}
+.activity-data .data{
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+.activity-data .data-title{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.activity-data .data .data-list{
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  white-space: nowrap;
+  color: var(--text-color);
+} 
+
+
+
+@media (max-width: 1000px) {
+  .sidebar{
+      width: 73px;
+  }
+  .sidebar.close{
+      width: 250px;
+  }
+  .sidebar .header-text{
+      opacity: 0;
+      pointer-events: none;
+  }
+  .sidebar.close .header-text{
+      opacity: 1;
+      pointer-events: auto;
+  }
+  .sidebar li a .text{
+      opacity: 0;
+      pointer-events: none;
+  }
+  .sidebar.close li a .text{
+      opacity: 1;
+      pointer-events: auto;
+  }
+  .sidebar ~ .dashboard{
+      left: 73px;
+      width: calc(100% - 73px);
+  }
+  .sidebar.close ~ .dashboard{
+      left: 250px;
+      width: calc(100% - 250px);
+  }
+  .sidebar ~ .dashboard .top{
+      left: 73px;
+      width: calc(100% - 73px);
+  }
+  .sidebar.close ~ .dashboard .top{
+      left: 250px;
+      width: calc(100% - 250px);
+  }
+  .activity .activity-data{
+      overflow-X: scroll;
+  }
+}
+
+@media (max-width: 780px) {
+  .dash-content .boxes .box{
+      width: calc(100% / 2 - 15px);
+      margin-top: 15px;
+  }
+}
+@media (max-width: 560px) {
+  .dash-content .boxes .box{
+      width: 100% ;
+  }
+}
+@media (max-width: 400px) {
+  .sidebar{
+      width: 0px;
+      padding: 10px 0;
+  }
+  .sidebar.close{
+      width: 70%;
+  }
+  .sidebar .image-text img{
+      opacity: 0;
+      pointer-events: none;
+  }
+  .sidebar.close .image-text img{
+      opacity: 1;
+      pointer-events: none;
+  }
+  .sidebar li a{
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--tran-02);
+  }
+  .sidebar.close li a{
+      opacity: 1;
+      pointer-events: none;
+  }
+
+  .sidebar header .toggle{
+    right: -39px;
+  }
+  
+  .sidebar.close header .toggle{
+    right: -15px;
+  }
+
+  .sidebar ~ .dashboard{
+      left: 0;
+      width: 100%;
+  }
+  .sidebar.close ~ .dashboard{
+      left: 73px;
+      width: calc(100% - 73px);
+  }
+  .sidebar ~ .dashboard .top{
+      left: 0;
+      width: 100%;
+  }
+  .sidebar.close ~ .dashboard .top{
+      left: 0;
+      width: 100%;
+  }
+}
