@@ -33,30 +33,30 @@ sidebarToggle.addEventListener("click", () => {
 
 // table.js
 // dados.js
-// var dados = [
-//     [
-//        "1",
-//        "Tiger Nixon",
-//        "System Architect",
-//        "Edinburgh",
-//        "5421",
-//        "2011\/04\/25",
-//        "$320,800",
-//        "$170,750",
-//        "$170,750",
-//     ],
-//     [
-//        "2",
-//        "Garrett Winters",
-//        "Accountant",
-//        "Tokyo",
-//        "8422",
-//        "2011\/07\/25",
-//        "$170,750",
-//        "$170,750",
-//        "$170,750",
-//     ],
-//   ];
+var dados = [
+    [
+       "1",
+       "Tiger Nixon",
+       "System Architect",
+       "Edinburgh",
+       "5421",
+       "2011\/04\/25",
+       "$320,800",
+       "$170,750",
+       "$170,750",
+    ],
+    [
+       "2",
+       "Garrett Winters",
+       "Accountant",
+       "Tokyo",
+       "8422",
+       "2011\/07\/25",
+       "$170,750",
+       "$170,750",
+       "$170,750",
+    ],
+  ];
 
 
 $(document).ready(function() {
