@@ -31,5 +31,7 @@ if ($conexao->query($sql) === TRUE) {
     echo "Erro: " . $conexao->errno;
 }
 
+
+
 $conexao->close();
 ?>

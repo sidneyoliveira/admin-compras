@@ -157,7 +157,28 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+            var dataTable = $('#table_1').DataTable({
+                'ajax': 'ajax.php', // Caminho para o arquivo PHP que retorna os dados
+                'column': [
+                    { 'data': 'num_req' }, // Nome do campo na resposta JSON
+                    { 'data': 'setor' }, // Nome do campo na resposta JSON
+                    { 'data': 'sec' }, // Nome do campo na resposta JSON
+                    { 'data': 'data' }, // Nome do campo na resposta JSON
+                    { 'data': 'item' }, // Nome do campo na resposta JSON
+                    { 'data': 'quant' }, // Nome do campo na resposta JSON
+                    { 'data': 'v_unit' }, // Nome do campo na resposta JSON
+                    { 'data': 'v_total' } // Nome do campo na resposta JSON
+                ]
+            });
 
+            // Obtém todos os valores da coluna "num_req" e registra no console
+            var numReqData = dataTable.column("'data': 'num_req'").data().toArray();
+            console.log(numReqData);
+        });
+
+    </script>
     
 </body>
 </html>

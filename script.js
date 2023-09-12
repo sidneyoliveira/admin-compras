@@ -59,12 +59,11 @@ var dados = [
   ];
   
 
-
 $(document).ready(function() {
    var table = $('#table_1').DataTable({
         'responsive': true,
-       'data': dados,
-       'columnDefs': [
+        'data': dados,
+        'columnDefs': [
           {
              'targets': 0,
              'checkboxes': true
@@ -74,13 +73,13 @@ $(document).ready(function() {
    });
 });
 
-$(function(){
-    //chama a função atualizaDados daqui à 5000ms (5s)
-    window.setTimeout(atualizaDados, 5000);
-    function atualizaDados() {
-        //carrega o conteúdo do arquivo "ajax.php" para dentro da div#exibeDados
-        $("#exibeDados").load('ajax.php');
-        //para perpetuar a chamada da função sempre a cada 5s
-        window.setTimeout(atualizaDados, 5000);
-    }
-});
+// $(function(){
+//     //chama a função atualizaDados daqui à 5000ms (5s)
+//     window.setTimeout(atualizaDados, 5000);
+//     function atualizaDados() {
+//         //carrega o conteúdo do arquivo "ajax.php" para dentro da div#exibeDados
+//         $("#exibeDados").load('ajax.php');
+//         //para perpetuar a chamada da função sempre a cada 5s
+//         window.setTimeout(atualizaDados, 5000);
+//     }
+// });
