@@ -1,34 +1,35 @@
 <?php
 
-$mysql = array(
-    'server' => 'localhost',
-    'user' => 'id21249027_compras',
-    'password' => 'Compras@2023',
-    'banco' => 'id21249027_admcompras'
-);
-// Conecte-se ao banco de dados SQL (substitua com suas credenciais)
-$conexao = new mysqli($mysql['server'], $mysql['user'], $mysql['password'], $mysql['banco']);
+    $mysql = array(
+        'server' => 'localhost',
+        'user' => 'id21249027_compras',
+        'password' => 'Compras@2023',
+        'banco' => 'id21249027_admcompras'
+    );
 
-// Verifique a conexão
-if ($conexao->connect_error) {
-    die("Erro de conexão: " . $conexao->connect_error);
-}
+    // Conecte-se ao banco de dados SQL (substitua com suas credenciais)
+    $conexao = new mysqli($mysql['server'], $mysql['user'], $mysql['password'], $mysql['banco']);
 
-// Consulta SQL para buscar dados
-$sql = "SELECT * FROM agua";
+    // Verifique a conexão
+    if ($conexao->connect_error) {
+        die("Erro de conexão: " . $conexao->connect_error);
+    }
 
-$resultado = $conexao->query($sql);
+    // Consulta SQL para buscar dados
+    $sql = "SELECT * FROM agua";
 
-// Converte os resultados em um array associativo
-$dados = array();
-while ($row = $resultado->fetch_assoc()) {
-    $dados[] = $row;
-}
+    $resultado = $conexao->query($sql);
 
-// Fecha a conexão com o banco de dados
-$conexao->close();
+    // Converte os resultados em um array associativo
+    $dados = array();
+    while ($row = $resultado->fetch_assoc()) {
+        $dados[] = $row;
+        
+    }
+    // Fecha a conexão com o banco de dados
+    $conexao->close();
 
-// Retorna os dados como JSON
-header('Content-Type: application/json');
-echo json_encode($dados);
+    // Retorna os dados como JSON
+    header('Content-Type: application/json');
+    echo json_encode($dados);
 ?>
