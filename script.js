@@ -31,26 +31,39 @@ sidebarToggle.addEventListener("click", () => {
     }
 });
 
+// table.js
+// dados.js
+var dados = [
+    [
+       "1",
+       "Tiger Nixon",
+       "System Architect",
+       "Edinburgh",
+       "5421",
+       "2011\/04\/25",
+       "$320,800",
+       "$170,750",
+       "$170,750",
+    ],
+    [
+       "2",
+       "Garrett Winters",
+       "Accountant",
+       "Tokyo",
+       "8422",
+       "2011\/07\/25",
+       "$170,750",
+       "$170,750",
+       "$170,750",
+    ],
+  ];
+  
 
-const fs = require('fs');
 
-// Nome do arquivo de texto a ser lido
-const fileName = 'data.txt';
-
-// Lê o arquivo de texto
-fs.readFile(fileName, 'utf8', (err, data) => {
-    if (err) {
-        console.error(`Erro ao ler o arquivo ${fileName}: ${err}`);
-        return;
-    }
-
-    console.log(`Conteúdo do arquivo ${fileName}:\n${data}`);
-});
-
-import data from ".data.sql"
-
-var table = $('#table_1').DataTable({
-       'data': data,
+$(document).ready(function() {
+   var table = $('#table_1').DataTable({
+        'responsive': true,
+       'data': dados,
        'columnDefs': [
           {
              'targets': 0,
@@ -58,5 +71,16 @@ var table = $('#table_1').DataTable({
           }
        ],
        'order': [[1, 'asc']]
+   });
 });
- 
+
+$(function(){
+    //chama a função atualizaDados daqui à 5000ms (5s)
+    window.setTimeout(atualizaDados, 5000);
+    function atualizaDados() {
+        //carrega o conteúdo do arquivo "ajax.php" para dentro da div#exibeDados
+        $("#exibeDados").load('ajax.php');
+        //para perpetuar a chamada da função sempre a cada 5s
+        window.setTimeout(atualizaDados, 5000);
+    }
+});

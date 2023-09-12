@@ -110,6 +110,18 @@
                     <span class="text">Solicitações</span>
                 </div>
 
+                <form action="dados.php" method = "POST">
+                        <input type="text" id="num_req" name="num_req" />
+                        <input type="text" id="setor" name="setor" />
+                        <input type="text" id="sec" name="sec" />
+                        <input type="date" id="data" name="data" />
+                        <input type="text" id="item" name="item" />
+                        <input type="number" id="quant" name="quant" />
+                        <input type="text" id="v_unit" name="v_unit" />
+                        <input type="text" id="v_total" name="v_total" />
+                    <input type="submit" value="enviar dados">
+                </form>
+
                 <div class="container p-3 mt-0 bg-light  border-primary">
                     <!-- DataTable Code starts -->
                     <table id="table_1" class="table table-striped nowrap" style="width:100%">
@@ -126,6 +138,8 @@
                                 <th>V. TOTAL</th>
                             </tr>
                         </thead>
+                        <div id="exibeDados">
+                        </div>
                         </tbody>
                     </table>
                 </div>
