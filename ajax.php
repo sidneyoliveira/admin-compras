@@ -1,10 +1,10 @@
 <?php
 
     $mysql = array(
-        'server' => 'localhost',
-        'user' => 'id21249027_compras',
-        'password' => 'Compras@2023',
-        'banco' => 'id21249027_admcompras'
+        'server' => 'sql.freedb.tech',
+        'user' => 'freedb_compras',
+        'password' => '!aYk!5gTJE2M%tN',
+        'banco' => 'freedb_adm-compras'
     );
 
     // Conecte-se ao banco de dados SQL (substitua com suas credenciais)
@@ -12,6 +12,7 @@
 
     // Verifique a conexão
     if ($conexao->connect_error) {
+        echo("erro");
         die("Erro de conexão: " . $conexao->connect_error);
     }
 
@@ -24,6 +25,7 @@
     $dados = array();
     while ($row = $resultado->fetch_assoc()) {
         $dados[] = $row;
+
         
     }
     // Fecha a conexão com o banco de dados
