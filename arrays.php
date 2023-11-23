@@ -1,12 +1,47 @@
 <?php
+
+
+
 // Definir arrays associativos com os valores e seus respectivos nomes
 $valoresENomesSetor = array(
+    // CON - ESP - INF - GAB
+    '0' => 'Secretaria',
+    
+    // ADM
     '1' => 'Guarda',
     '2' => 'Tributos',
-    '3' => 'Almoxarifado',
+    '3' => 'Almoxarifado ADM',
     '4' => 'Raio',
-    // Adicione mais valores conforme necessário
+    '5' => 'Cotar',
+
+    // ASS
+    '6' => 'Secretaria SMPS',
+    '7' => 'CRAS Almofala',
+    '8' => 'CRAS Gargoe',
+    '9' => 'CREAS',
+    '10' => 'Casa do Cidadao',
+    '11' => 'Conselho Tutelar',
+    '12' => 'Casa Lar',
+
+    // EDU
+    '13' => 'Secretaria SME',
+    '14' => 'NIT',
+    '15' => 'Almoxarifado SME',
+    '16' => 'Escola',
+    
+    // SAU
+    '17' => 'Secretaria SMS',
+    '18' => 'Hospital',
+    '19' => 'Atencao Basica',
+    '20' => 'MAC',
+
+    // TUR
+    '21' => 'Secretaria SEMAT',
+    '22' => 'Museu',
+
 );
+
+
 
 // $valoresENomesSec = array(
 //     '1' => 'Secretaria Municipal de Administração, Finanças e Planejamento - SEAFIN',
@@ -51,3 +86,12 @@ $valoresENomesValor = array(
     '3' => 33.80,
     // Adicione mais valores conforme necessário
 );
+
+
+$valorStatuss = array(
+    '1' => "Enviado",
+    '2' => "Visualizado",
+    '3' => "Entregue",
+    // Adicione mais valores conforme necessário
+);
+

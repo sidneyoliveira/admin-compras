@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "datatables.net-dt": "^1.13.6",
-    "lucide": "^0.274.0"
+    "docker": "^1.0.0",
+    "lucide": "^0.274.0",
+    "pdfmake": "^0.2.7"
   }
 }

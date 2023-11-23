@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+        table {
+          border: 1px solid #111;
+          border-collapse: collapse;
+          margin: 2vw 2vw;
+          padding: 0;
+          width: 95%;
+          table-layout: fixed;
+        }
+        
+        table caption {
+          font-size: 1.5em;
+          margin: .5em 0 .75em;
+        }
+        
+        table tr {
+          background-color: #f8f8f8;
+          border: 1px solid #111;
+          padding: .35em;
+        }
+        
+        table th,
+        table td {
+          border: 1px solid #111;
+          padding: 0 .2em ;
+          text-align: center;
+          break-inside: avoid-column;
+        }
+        
+        table th {
+          font-size: .85em;
+          letter-spacing: .1em;
+          
+        }
+        
+        table#header {
+          border-collapse: collapse;
+        }
+        
+        table#header th,
+        table#header td {
+          border: none;
+        }
+        
+        table#info th,
+        table#info td {
+          border: none;
+        }
+        
+        table#info tr {
+          background-color: #f8f8f8;
+          border: none;
+          padding: .35em;
+        }
+        
+        .vazio{
+          font-size: 0.2em !important;
+        }
+        
+        
+        /* general styling */
+        body {
+          font-family: "Inter", sans-serif;
+          line-height: 2;
+          
+        }
+  </style>
+  <table id="header">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th scope="col" style="width: 10%"><img src="/assets/logo%20gest%C3%A3o%20azul.png" alt="Minha Figura" style="width: 7vw;padding: .5vw;"></th>
+        <th scope="col" style="width: 60%; text-align: center; letter-spacing: normal; line-height: 0.5em;">
+          <h2 style="font-size: 1.2em; margin-top: 1em;">PREFEITURA MUNICIPAL DE ITAREMA</h2>
+          <h2 style="font-size: 1em; font-weight: 200;">Praça Nossa Senhora de Fátima, 48</h2>
+          <h2 style="font-size: 1em; font-weight: 200;">Centro - Itarema - CE - Brasil | CEP: 62.590-000</h2>
+          <h2 style="font-size: 1.2em; margin-top: 1em;">REQUISIÇÃO DE COMPRA</h2>
+        </th>
+        <th scope="col" style="width: 10%"><img src="/assets/logo%20gest%C3%A3o%20azul.png" alt="Minha Figura" style="width: 7vw;padding: .5vw;"></th>
+      </tr>
+    </thead>
+  </table>
+  <table id="info">
+    <thead>
+      <tr class="vazio">
+        <th scope="col" style="width: 1%;">&nbsp;</th>
+        <th scope="col" style="width: 10%;">&nbsp;</th>
+        <th scope="col" style="width: 5%;">&nbsp;</th>
+        <th scope="col" style="width: 8%;">&nbsp;</th>
+        <th scope="col" style="width: 40%;">&nbsp;</th>
+        <th scope="col" style="width: 8%;">&nbsp;</th>
+        <th scope="col" style="width: 8%;">&nbsp;</th>
+        <th scope="col" style="width: 2%;">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="font-size: 0.8em;">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">Nº REQ:</td>
+        <td id="num_req" style="text-align:left;border: 1px solid #111 !important;border-collapse:collapse;">0001</td>
+        <td>SECRET:</td>
+        <td id="sec" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:left;border: 1px solid #111 !important;border-collapse:collapse;">ADMINISTRAÇÃO, FINANÇAS E PLANEJAMENTO</td>
+        <td>SETOR:</td>
+        <td id="setor" style="text-align:left;border: 1px solid #111 !important;border-collapse:collapse;">RAIO</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="vazio">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr style="font-size: 0.8em;">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">EMPRESA:</td>
+        <td id="sec" colspan="3" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:left; border: 1px solid #111 !important;border-collapse:collapse;">ADMINISTRAÇÃO, FINANÇAS E PLANEJAMENTO</td>
+        <td>HORA:</td>
+        <td id="setor" style="text-align:left;border: 1px solid #111 !important;border-collapse:collapse;">9:00</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="vazio">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr style="font-size: 0.8em;">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">OBJETO:</td>
+        <td id="sec" colspan="3" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align:left; border: 1px solid #111 !important;border-collapse:collapse;">ADMINISTRAÇÃO, FINANÇAS E PLANEJAMENTO</td>
+        <td>DATA:</td>
+        <td id="setor" style="text-align:left;border: 1px solid #111 !important;border-collapse:collapse;">25/06/2023</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="vazio">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="table">
+    <thead>
+      <tr style="background-color: #18dbdb;">
+        <th scope="col" style="width: 5%;">ITEM</th>
+        <th scope="col" style="width: 8%;">QUANT.</th>
+        <th scope="col" style="width: 5%;">UND.</th>
+        <th scope="col" style="width: 30%;">DESCRIÇÃO</th>
+        <th scope="col" style="width: 8%;">V.UNIT.</th>
+        <th scope="col" style="width: 8%;">V.TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="font-size: 0.8em;">
+        <td id="item">1</td>
+        <td id="quant">$quant1</td>
+        <td id="und">UND</td>
+        <td id="desc" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">ÁGUA MINERAL NATURAL, SEM GÁS, ACONDICIONADA EM GARRAFA PLÁSTICA DE 500ML.</td>
+        <td id="v_unit">0</td>
+        <td id="v_total">0</td>
+      </tr>
+      <tr id="table" style="font-size: 0.8em;">
+        <td id="item">2</td>
+        <td id="quant">$quant2</td>
+        <td id="und">UND</td>
+        <td id="desc" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">RECARGA DE ÁGUA MINERAL NATURAL, SEM GÁS, ACONDICIONADA EM VASILHAMES DE POLICARBONATO 20 LITROS</td>
+        <td id="v_unit">0</td>
+        <td id="v_total">0</td>
+      </tr>
+      <tr id="table" style="font-size: 0.8em;">
+        <td id="item">3</td>
+        <td id="quant">$quant3</td>
+        <td id="und">UND</td>
+        <td id="desc" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">VASILHAME PARA ÁGUA EM POLICARBONATO COMPLETO (COM ÁGUA), LISO, TRANSPARENTE COM CAPACIDADE DE 20 LITROS;</td>
+        <td id="v_unit">0</td>
+        <td id="v_total">0</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="total">
+    <thead>
+      <tr>
+        <th scope="col" colspan="7" style="text-align:left;">TOTAL GERAL</th>
+        <th scope="col">R$ 20,00</th>
+      </tr>
+    </thead>
+  </table>
+  <table id="ass">
+    <thead>
+      <tr>
+        <th scope="col" style="height: 8em; border: none !important;border-collapse:collapse;">TOTAL GERAL</th>
+        <th scope="col" style="height: 8em; border: none !important;border-collapse:collapse;"></th>
+      </tr>
+    </thead>
+  </table>
+</body>
+</html>

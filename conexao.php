@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "celke";
+$host = "sql.freedb.tech";
+$user = "freedb_compras";
+$pass = "25CrUX3#@bcB&Au";
+$dbname = "freedb_adm-compras";
 $port = 3306;
 
 try {
